@@ -1,10 +1,10 @@
-ebd39c64b2c060d445d8eaf7bed248f4 *DESCRIPTION
+402062186a60ccfb7c0df690fa6a7595 *DESCRIPTION
 1bbe09c6011c4593ae16f13e02bd427c *LICENSE
 2bd4309ff7ae85d4209563516422829b *NAMESPACE
 2e3f1bdf9d57fc371984f03a6fa6faf4 *R/dLogChisq.R
 cce6231efca551d7bd94bb949b42a921 *R/dLogExp.R
 610b4c1d569720400a8376afa51c63c8 *R/dLogGamma.R
-c608d8c4a78d06d2a16b2fbdd678c2b9 *R/dLogHalfflat.R
+06c0311dc04e254fbed22d327a87fa4a *R/dLogHalfflat.R
 6308c22ad83e4edfc07b37c0b608f307 *R/dLogInvgamma.R
 d25b09c67106b1f7b9e83d41df9ac636 *R/dLogLnorm.R
 6bd712ed3651fdcadb55ae6731e147b6 *R/dLogWeib.R
@@ -14,11 +14,11 @@ b7e61212a27bdef2066dfc6388f1c98b *R/efficiencyGain.R
 2b5dbcd5018fc6c78208f79b7dc23625 *R/nimbleNoBounds.R
 c7759ff1aaf9e65bc30a173a0437f477 *R/zzz.R
 ff238f1843c3d8570408a73b65ccaf83 *README.md
-6adf5b1690ac98f1353df62422491336 *build/vignette.rds
+1f2b63977b0efdf12a891c9f9a07f5fb *build/vignette.rds
 996241cd87bb8a3f0e45f570a1c7f6db *data/efficiencyGain.csv
 37a869f5d823da43a59b48eafce5358c *inst/CITATION
 a519a2f1f639ec913cb53c158ec189a1 *inst/COPYRIGHTS
-d4559b6fd7a87b8de24bd14995532be7 *inst/NEWS.md
+ac311b668ad155ae9c2646c1bdff2cf9 *inst/NEWS.md
 9f7c82c33c57a597f8676ac5e8d00155 *inst/doc/nimbleNoBounds.R
 16c6c09e6946ea6732898c614fc6996e *inst/doc/nimbleNoBounds.Rmd
 dbbf60d92b55d901e48b4fbb0b245233 *inst/doc/nimbleNoBounds.html
