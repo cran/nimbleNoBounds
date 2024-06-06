@@ -105,13 +105,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   for (var i = 0; i < sheets.length; i++) {
     if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
     try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    for (var j = 0; j < rules.length; j++) {
+    var j = 0;
+    while (j < rules.length) {
       var rule = rules[j];
       // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -433,7 +440,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <a class="sourceLine" id="cb1-31" title="31">  g  &lt;-<span class="st"> </span><span class="kw">exp</span>(tg)</a>
 <a class="sourceLine" id="cb1-32" title="32">  ig &lt;-<span class="st"> </span><span class="kw">exp</span>(tig) <span class="co">## Currently doesn&#39;t compile if a node is called &quot;i&quot;</span></a>
 <a class="sourceLine" id="cb1-33" title="33">  l  &lt;-<span class="st"> </span><span class="kw">exp</span>(tl)</a>
-<a class="sourceLine" id="cb1-34" title="34">  u  &lt;-<span class="st"> </span>(u2<span class="op">*</span><span class="kw">exp</span>(tu)<span class="op">+</span>u1)<span class="op">/</span>(u2<span class="op">-</span>u1)</a>
+<a class="sourceLine" id="cb1-34" title="34">  u  &lt;-<span class="st"> </span><span class="kw">ilogit</span>(tu)<span class="op">*</span>(u2<span class="op">-</span>u1)<span class="op">+</span>u1 <span class="co">## Scaled and shifted output from ilogit transformation</span></a>
 <a class="sourceLine" id="cb1-35" title="35">  w  &lt;-<span class="st"> </span><span class="kw">exp</span>(tw)</a>
 <a class="sourceLine" id="cb1-36" title="36">})</a>
 <a class="sourceLine" id="cb1-37" title="37"></a>
